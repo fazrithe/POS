@@ -107,11 +107,13 @@ class Laporan extends CI_Controller{
 		// $x['jml']  = $this->M_laporan->get_total_pembelian();
 		
 		$cust_id = $this->session->userdata('temp_id');
+		$customer_id = $this->session->userdata('sess_ccustid');
+		$custname = $this->M_customer->get_id_customer($customer_id);
 		$x['data']=$this->M_penjualan->cetak_faktur();
 		//$x['sum_qty'] = $this->M_penjualan->sum_qty();
 		$x['cust_info'] = $this->M_customer->get_direct_id($cust_id);
-		// print_r($x);
-
+		$x['cust_name'] = $custname->customer_name;
+		
 		$this->load->view('admin/laporan/v_faktur_jual',$x);			
 		$html = $this->output->get_output();
 		$this->load->library('pdf');

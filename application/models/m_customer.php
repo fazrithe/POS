@@ -85,4 +85,18 @@ class M_customer extends CI_Model{
         $query = $this->db->get('tbl_customer');
         return $query->result();
     }
+
+	function get_alamat_customer($id){
+		$this->db->select('customer_alamat','customer_name');
+		$this->db->where('customer_id', $id);
+        $query = $this->db->get('tbl_customer');
+		return $query->row();
+	}
+
+	function get_id_customer($id){
+		$this->db->select('customer_name');
+		$this->db->where('customer_id', $id);
+        $query = $this->db->get('tbl_customer');
+		return $query->row();
+	}
 }

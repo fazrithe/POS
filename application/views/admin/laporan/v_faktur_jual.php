@@ -62,7 +62,7 @@
                     <th style="text-align:left;">No Faktur</th>
                     <th style="text-align:left;">: <?php echo $b['jual_nofak']; ?></th>
                     <th style="text-align:left;">Nama Customer</th>
-                    <th style="text-align:left;"> : <?php echo "$cust"; ?></th>
+                    <th style="text-align:left;"> : <?php echo $cust_name ?></th>
                 </tr>
                 <tr>  
                     <th style="text-align:left;">Tanggal</th>                    
@@ -75,7 +75,7 @@
             <table border="0" style= "border-collapse:collapse; padding-left:35px; border-bottom: none; width:950px; font-size:20px;">
                 <thead style="border: 1px solid black;">
                     <tr>
-                        <th style="border: 1.5px solid black; width:10px;">No</th>
+                        <th style="border: 1.5px solid black; width:100px;">No</th>
                         <th style="border: 1.5px solid black;">Nama Barang</th>
                         <th style="border: 1.5px solid black;">Qty</th>
                         <th style="border: 1.5px solid black;">Satuan</th>
@@ -101,7 +101,7 @@
                             $total = $i['d_jual_total'];
                     ?>
                         <tr style= "border:1.5px solid black;">
-                            <td style="border:1.5px solid black; text-align:center;width:5px;"><?php echo $no; ?></td>
+                            <td style="border:1.5px solid black; text-align:center;width:100px;"><?php echo $no; ?></td>
                             <td style="border:1.5px solid black; text-align:left; width:400px;"><?php echo $nabar; ?></td>
                             <td style="border:1.5px solid black; text-align:center; width:60px;"><?php echo $qty; ?></td>
                             <td style="border:1.5px solid black; text-align:center; width:15px;"><?php echo $satuan; ?></td>
@@ -150,7 +150,7 @@
                     </tr> -->
                     <tr>
                         <!--<th></th>-->>
-                        <th>Customer</th>
+                        <th width="80px">Customer</th>
                         <th colspan="2">Serang, <?php echo date('d-M-Y') ?></th> 
                         
                         <!-- <th></th> -->
@@ -160,7 +160,7 @@
                     </tr>
                     <tr>
                         <th></th>
-                        <!-- <th>(<?php echo $cust;?>)</th>
+                        <!-- <th>(<?php echo $cust_name ?>)</th>
                         <th colspan="2">(<?php echo $this->session->userdata('nama'); ?>)</th> -->
                         <th></th> 
                         <th></th>
@@ -171,7 +171,7 @@
                     </tr>
                     <tr>
                         <!--<th></th>-->
-                        <th>(<?php echo $cust;?>)</th>
+                        <th>(<?php echo $cust_name ?>)</th>
                         <th colspan="2">(<?php echo $this->session->userdata('nama'); ?>)</th>
                         <th></th>
                         <th style="text-align: left;">Kembalian</th>
@@ -195,7 +195,7 @@
                     <td><br /><br /></td>
                 </tr>
                 <tr>
-                    <td align="center">(<?php echo $cust;?>)</td>
+                    <td align="center">(<?php echo $cust_name ?>)</td>
                     <td align="right">( <?php echo $this->session->userdata('nama'); ?> )</td>
                 </tr>
                 <tr>

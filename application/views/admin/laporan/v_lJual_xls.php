@@ -21,6 +21,8 @@ header("Expires: 0");
 
             <th>Faktur</th>
 
+            <th>Nama Customer</th>
+
             <th>Tanggal</th>
 
             <th>Kode Barang</th>
@@ -35,17 +37,27 @@ header("Expires: 0");
 
             <th>Diskon</th>
 
+            <th>Tipe Pembayaran</th>
+
             <th>Subtotal (Rp)</th>
                         
         </tr>
     </thead>
     <tbody>
         <?php $i=1; foreach($data->result_array() as $list) { ?>
-
+            <!-- <?php  
+                 $this->db->select('customer_name');
+                 $this->db->where('customer_id',$list['jual_customer']);
+                 $this->db->from('tbl_customer');
+                 $customer = $this->db->get();   
+                 $custname = $customer->row(); 
+            ?> -->
         <tr>
             <td align='center'><?php echo $i;?></td>
 
             <td><?php echo $list['jual_nofak'];?></td>
+
+            <td><?php echo $list['customer_name'];?></td>
 
             <td><?php echo $list['jual_tanggal'];?></td>
 
@@ -60,6 +72,8 @@ header("Expires: 0");
             <td><?php echo $list['d_jual_qty'];?></td>
             
             <td><?php echo $list['d_jual_diskon'];?></td>
+
+            <td><?php echo $list['jual_tipe_pembayaran'];?></td>
 
             <td><?php echo $list['d_jual_total'];?></td>
 

@@ -57,14 +57,21 @@
                         <tr>
                             <th>Customer</th>
                             <th>
-                            <select name="customer" name="cust_id" class="selectpicker show-tick form-control customers" data-live-search="true" id="getCutomer">
+                            <select name="customer" id="customer_id" class="selectpicker show-tick form-control customers" data-live-search="true">
                             <option value="0">Input Customer</option>
                             <?php
-                                foreach($customer as $value){ ?>
+                                foreach($customer as $value){
+                                    $id = $this->session->userdata('sess_ccustid');
+                                    if($id == $value->customer_id){
+                            ?>
+                                     <option value="<?php echo $value->customer_id ?>" selected><?php echo $value->customer_name ?></option>
+                            <?php 
+                                    }else{        
+                            ?>
                             <option value="<?php echo $value->customer_id ?>"><?php echo $value->customer_name ?></option>
-                            <?php } ?>
+                            <?php }} ?>
                             </select>
-                                <input type="text" name="cust_new_id" style="display:block ;" id="cust_id" value="<?php echo $this->session->userdata('sess_cname');?>" class="form-control input-sm">
+                                <input type="text" name="cust_new_id" style="display:block ;" id="cust_new_id" value="<?php echo $this->session->userdata('sess_cname');?>" class="form-control input-sm">
                             </th>
                         </tr>
                         <tr>
@@ -163,6 +170,8 @@
                 </table>
                 <form action="<?php echo base_url() . 'admin/Penjualan/simpan_penjualan' ?>" method="post">
                     <table>
+                        <input type="hidden" id="fin_customer" name="fin_customer" value="<?php echo $this->session->userdata('sess_ccustid') ?>">
+                        <input type="hidden" id="fin_new_customer" name="fin_new_customer" value="<?php echo $this->session->userdata('sess_cname');?>">
                         <input type="hidden" id="fin_limit" name="fin_limit" value="<?php echo $this->session->userdata('sess_climit');?>">
                         <input type="hidden" id="fin_hutang" name="fin_hutang" value="<?php echo $this->session->userdata('sess_chutang');?>">
                         <input type="hidden" id="fin_sisa" name="fin_sisa" value="<?php echo $this->session->userdata('sess_csisa');?>">
@@ -449,6 +458,14 @@
         </script>
         <script type="text/javascript">
             $(document).ready(function() {
+                var custid = $('#fin_customer').val();
+                console.log(custid);
+                const form = document.getElementById('cust_new_id');
+                    if (custid == 0) {
+                        form.style.display = 'block';
+                    } else {
+                        form.style.display = 'none';
+                    }
                 if ($("#hid_custid").val()!=""){                   
                     document.getElementById('lbl_limit').innerHTML = "Limit";
                     document.getElementById('lbl_hutang').innerHTML = "Hutang";
@@ -530,6 +547,44 @@
 
                 $("#kode_brg").focus();
                 
+                $("#customer_id").change(function(){
+                    var custid = $(this).val();
+                    console.log(custid);
+                  
+                        $.ajax({
+                            type: "POST",
+                            url: "<?php echo base_url() . 'admin/Penjualan/get_alamat_customer'; ?>",
+                            data: {id:custid},
+                            success: function(msg) {
+                                console.log(msg);
+                                    $('#fin_alamat').val(msg);
+                                    $('#hid_alamat').val(msg);
+                                
+                            }
+                        });
+                    
+                    // idCust = $(this).val();
+                    const form = document.getElementById('cust_new_id');
+                    if (custid == 0) {
+                        form.style.display = 'block';
+                    } else {
+                        form.style.display = 'none';
+                    }
+                    $("#fin_customer").val(custid);
+                });
+
+                $("#cust_new_id").change(function(){
+                    var custid = $(this).val();
+                    $("#fin_new_customer").val(custid);
+                    $.ajax({
+                            type: "POST",
+                            url: "<?php echo base_url() . 'admin/Penjualan/get_nama_customer'; ?>",
+                            data: {name:custid},
+                            success: function(msg) {
+                                $("#fin_new_customer").val(msg);
+                            }
+                        });
+                });
 
                 $("#cust_id").keyup(function() {
                     var custid = $("#cust_id").val();

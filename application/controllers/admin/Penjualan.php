@@ -185,11 +185,29 @@ class Penjualan extends CI_Controller{
 				$finAlamat = $this->input->post('fin_alamat'); 	
 				// echo $finAlamat;die();					
 
-				$customer  = $this->session->userdata('sess_cname');
-				if($this->session->userdata('sess_cname')==""){
-					$customer = "ssNONAMEee";
-				}
+				$customer  = $this->input->post('fin_customer');
+				$new_customer  = $this->input->post('fin_new_customer');
 
+				$tipe_pembayaran = $this->input->post('tipe_pembayaran');
+				// if($this->session->userdata('sess_cname')==""){
+				// 	$customer = "ssNONAMEee";
+				// }
+				if($customer == 0){
+					$post['customer_name']   	= $new_customer;
+					$post['customer_limit']   	= 0;
+					$post['customer_hutang']   	= 0;
+					$post['customer_alamat']   	= $finAlamat;
+					$post['customer_telepon']   = '-';
+					$post['customer_flagging'] 	= 1;
+					$post['insert_datetime']  	= date('Y-m-d H:i:s');
+					$post['update_datetime']  	= date('Y-m-d H:i:s');
+					$post['insert_user']       	= $this->session->userdata('nama');
+					$post['update_user']       	= $this->session->userdata('nama');
+					$this->db->insert('tbl_customer', $post);
+					$insert_id_cust = $this->db->insert_id();
+				}else{
+					$insert_id_cust = $customer;
+				}
 				$param     = array();
 				
 				$total=$this->input->post('total');
@@ -219,11 +237,11 @@ class Penjualan extends CI_Controller{
 				$jual_status_bayar = '1';		
 
 				if ($finLimit!="" || $finLimit!=0){
-					$customer  = $this->session->userdata('sess_cid');
+					$customer  = $this->input->post('fin_customer');
 					$finLimit  = str_replace(",","",$this->input->post('fin_limit'));
 					$finHutang = str_replace(",","",$this->input->post('fin_hutang'));
 					$finSisa   = str_replace(",","",$this->input->post('fin_sisa'));	
-					$finAlamat = $this->session->userdata('sess_clamat');			
+					$finAlamat = $this->input->post('fin_alamat');		
 					$tmpHutang = $finHutang + $jual_belanja;
 					$jual_status_bayar = '0';
 					$this->session->set_userdata('newhutang',$tmpHutang);							
@@ -231,7 +249,7 @@ class Penjualan extends CI_Controller{
 						$jual_tipe = "H";
 						$nofak=$this->M_penjualan->get_nofak();	
 						$this->session->set_userdata('nofak',$nofak);							
-						array_push($param,$jual_tipe,$nofak,$total,$jml_uang,$jual_belanja,$kembalian,$cashback,$aki_bekas,$customer,$finAlamat,$jual_status_bayar,$garansi);
+						array_push($param,$jual_tipe,$nofak,$total,$jml_uang,$jual_belanja,$kembalian,$cashback,$aki_bekas,$insert_id_cust,$finAlamat,$jual_status_bayar,$garansi,$tipe_pembayaran);
 						$this->insertData($param);
 					}else{
 						echo $this->session->set_flashdata('msg','<label class="label label-danger">Limit Customer tidak mencukupi</label>');
@@ -247,7 +265,7 @@ class Penjualan extends CI_Controller{
 							$nofak=$this->M_penjualan->get_nofak();
 							$this->session->set_userdata('nofak',$nofak);
 							// echo $finAlamat;die();
-							array_push($param,$jual_tipe,$nofak,$total,$jml_uang,$jual_belanja,$kembalian,$cashback,$aki_bekas,$customer,$finAlamat,$jual_status_bayar,$garansi);
+							array_push($param,$jual_tipe,$nofak,$total,$jml_uang,$jual_belanja,$kembalian,$cashback,$aki_bekas,$insert_id_cust,$finAlamat,$jual_status_bayar,$garansi,$tipe_pembayaran);
 							// print_r($param);die();
 							$this->insertData($param);
 						}
@@ -393,5 +411,27 @@ class Penjualan extends CI_Controller{
         echo json_encode($this->M_customer->get_customer_search($q));
     }
 
+	function get_alamat_customer(){
+		$id = $this->input->post('id');		
+		$this->session->set_userdata('sess_ccustid',$id);
+		if($id == 0){
+			echo 0;
+		}else{
+		$result = $this->M_customer->get_alamat_customer($id);
+		$this->session->set_userdata('sess_calamat',$result->customer_alamat);
+		// $this->session->set_userdata('sess_cname',$result->customer_name);
+		// $this->session->set_userdata('sess_ccustid',$id);
+	
+			echo $result->customer_alamat;
+		}
+
+	}
+
+	function get_nama_customer(){
+		$name = $this->input->post('name');		
+		$this->session->set_userdata('sess_cname',$name);
+		echo $name;
+
+	}
 
 }
