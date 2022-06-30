@@ -1,0 +1,20 @@
+[2020-04-18 01:16:47.020] [sharedprocess] [info] main {"machineId":"85e2b630cbdaf53f92e354701a9aecd41b32cc84d656834588d8ac6ff0d1d3e3","windowId":2}
+[2020-04-18 01:16:59.416] [sharedprocess] [info] Installing extension: ms-vscode.go
+[2020-04-18 01:17:05.722] [sharedprocess] [info] Downloaded extension: ms-vscode.go /tmp/da7abe95-89ed-454b-907e-b810c653ee0c
+[2020-04-18 01:17:18.908] [sharedprocess] [info] Extracted extension to /home/daniel/.vscode/extensions/.ms-vscode.go-0.14.1: ms-vscode.go
+[2020-04-18 01:17:18.915] [sharedprocess] [info] Renamed to /home/daniel/.vscode/extensions/ms-vscode.go-0.14.1
+[2020-04-18 01:17:18.921] [sharedprocess] [info] Installation completed. ms-vscode.go
+[2020-04-18 01:17:19.008] [sharedprocess] [info] Extensions installed successfully: ms-vscode.go
+[2020-04-18 01:17:27.054] [sharedprocess] [info] Starting to clean up unused language packs.
+[2020-04-18 02:31:00.014] [sharedprocess] [info] Installing extension: dart-code.flutter
+[2020-04-18 02:31:01.087] [sharedprocess] [info] Downloaded extension: dart-code.flutter /tmp/edacc354-178e-4d0b-8478-601e107c3f67
+[2020-04-18 02:31:01.194] [sharedprocess] [info] Extracted extension to /home/daniel/.vscode/extensions/.dart-code.flutter-3.9.1: dart-code.flutter
+[2020-04-18 02:31:01.195] [sharedprocess] [info] Renamed to /home/daniel/.vscode/extensions/dart-code.flutter-3.9.1
+[2020-04-18 02:31:01.201] [sharedprocess] [info] Installation completed. dart-code.flutter
+[2020-04-18 02:31:01.731] [sharedprocess] [info] Installing extension: dart-code.dart-code
+[2020-04-18 02:31:04.037] [sharedprocess] [info] Downloaded extension: dart-code.dart-code /tmp/95c3a617-d9f5-4400-84ff-38ee27303891
+[2020-04-18 02:31:08.562] [sharedprocess] [info] Extracted extension to /home/daniel/.vscode/extensions/.dart-code.dart-code-3.9.1: dart-code.dart-code
+[2020-04-18 02:31:08.562] [sharedprocess] [info] Renamed to /home/daniel/.vscode/extensions/dart-code.dart-code-3.9.1
+[2020-04-18 02:31:08.568] [sharedprocess] [info] Installation completed. dart-code.dart-code
+[2020-04-18 02:31:08.618] [sharedprocess] [info] Extensions installed successfully: dart-code.dart-code
+[2020-04-18 02:31:08.620] [sharedprocess] [info] Extensions installed successfully: dart-code.flutter

@@ -1,0 +1,2 @@
+[2020-03-19 22:40:05.581] [renderer1] [error] An unknown error occurred. Please consult the log for more details.: Error
+    at XMLHttpRequest.r.onerror (file:///snap/code/27/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:401:119)

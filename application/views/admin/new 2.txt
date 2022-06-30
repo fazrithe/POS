@@ -1,0 +1,26 @@
+Search "@page" (13 hits in 9 files)
+  C:\xampp\htdocs\afrizal-jaya\application\libraries\dompdf\lib\php-css-parser\tests\files\atrules.css (1 hit)
+	Line 28: @page :pseudo-class {
+  C:\xampp\htdocs\afrizal-jaya\application\libraries\dompdf\lib\php-css-parser\tests\Sabberworm\CSS\ParserTest.php (2 hits)
+	Line 174: @page :pseudo-class {margin: 2in;}
+	Line 195: @page :pseudo-class {margin: 2in;}
+  C:\xampp\htdocs\afrizal-jaya\application\libraries\dompdf\lib\res\html.css (1 hit)
+	Line 20: @page {
+  C:\xampp\htdocs\afrizal-jaya\application\libraries\dompdf\README.md (1 hit)
+	Line 37:    @page rules
+  C:\xampp\htdocs\afrizal-jaya\application\libraries\dompdf\src\Css\Style.php (1 hit)
+	Line 369:             $d["size"] = "auto"; // @page
+  C:\xampp\htdocs\afrizal-jaya\application\libraries\dompdf\src\Css\Stylesheet.php (4 hits)
+	Line 121:      * The styles defined by @page rules
+	Line 1252:             "    \s*( (?:(?>[^{}]+) ({)?            # Parse rulesets and individual @page rules           \n" .
+	Line 1324:                         //This handles @page to be applied to page oriented media
+	Line 1326:                         //@page { margin:1cm; color:blue; }
+  C:\xampp\htdocs\afrizal-jaya\application\libraries\dompdf\src\Dompdf.php (1 hit)
+	Line 737:         // @page style rules : size, margins
+  C:\xampp\htdocs\afrizal-jaya\application\libraries\dompdf\src\Positioner\Fixed.php (1 hit)
+	Line 35:         // Compute the margins of the @page style
+  C:\xampp\htdocs\afrizal-jaya\application\third_party\PHPExcel-1.8\Classes\PHPExcel\Writer\HTML.php (1 hit)
+	Line 1591:         $htmlPage = '@page { ';
+Search "v_faktur_jual" (1 hit in 1 file)
+  C:\xampp\htdocs\afrizal-jaya\application\controllers\admin\Laporan.php (1 hit)
+	Line 115: 		$this->load->view('admin/laporan/v_faktur_jual',$x);			

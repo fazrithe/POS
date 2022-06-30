@@ -1,0 +1,6 @@
+Soucode ini dibangun dan dirancang oleh:
+
+Programmer: Daniel-N-Pangaribuan
+Tahun 	  : 2020
+Email     : novariodaniel@gmail.com
+Lisensi   : OpenSource

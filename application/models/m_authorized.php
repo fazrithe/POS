@@ -1,0 +1,35 @@
+<?php
+class M_authorized extends CI_Model{
+
+	function hapus_kategori($kode){
+		// $hsl=$this->db->query("DELETE FROM tbl_kategori where kategori_id='$kode'");
+		$hsl=$this->db->query("UPDATE tbl_kategori set isExist = 0 where kategori_id='$kode'");
+		return $hsl;
+	}
+
+	function update_kategori($kode,$kat){
+		$hsl=$this->db->query("UPDATE tbl_kategori set kategori_nama='$kat' where kategori_id='$kode'");
+		return $hsl;
+	}
+
+	function tampil_kategori(){
+		$hsl=$this->db->query("select * from tbl_kategori where isExist = 1 order by kategori_id desc");
+		return $hsl;
+	}
+
+	function simpan_kategori($kat){
+		$hsl=$this->db->query("INSERT INTO tbl_kategori(kategori_nama) VALUES ('$kat')");
+		return $hsl;
+    }
+    
+    function get_oldpassw(){
+        $hsl=$this->db->query("select password from tbl_credential");
+        return $hsl;
+	}
+	
+	function change_password($passw,$update_user,$update_date){
+		$hsl=$this->db->query("update tbl_credential set password = '$passw', update_user='$update_user',update_datetime='$update_date'");
+		return $hsl;
+	}
+
+}

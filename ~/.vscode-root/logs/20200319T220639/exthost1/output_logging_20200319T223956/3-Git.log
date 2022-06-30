@@ -1,0 +1,19 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /var/www/html/pos
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse create_notif_stock_minimum
+> git rev-parse --symbolic-full-name create_notif_stock_minimum@{u}
+fatal: no upstream configured for branch 'create_notif_stock_minimum'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :application/controllers/admin/Notification.php
+> git ls-files --stage -- /var/www/html/pos/application/controllers/admin/Notification.php

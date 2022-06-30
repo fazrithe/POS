@@ -1,0 +1,15 @@
+ApplicationInsights:CorrelationIdManager [
+  Error: getaddrinfo ENOTFOUND dc.services.visualstudio.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26) {
+    errno: 'ENOTFOUND',
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'dc.services.visualstudio.com'
+  }
+]
+[Info  - 10:40:07 PM] Initialising intelephense 1.3.11
+[Info  - 10:40:07 PM] Initialised in 11 ms
+[Info  - 10:40:07 PM] Indexing started.
+[Info  - 10:40:14 PM] Indexing ended. 665 files indexed in 6s.
+[Info  - 10:40:14 PM] Writing state to /var/www/html/pos/~/.vscode-root/User/workspaceStorage/bb1de9b4beb50a3a03bf1c7c87e68c07/bmewburn.vscode-intelephense-client/a1f7b0d.
+[Info  - 10:40:14 PM] Wrote state in 0.4s.

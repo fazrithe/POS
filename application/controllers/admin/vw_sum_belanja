@@ -1,0 +1,10 @@
+create view vw_sum_belanja as
+select distinct(a.jual_nofak),a.jual_belanja,d.sales_id,e.karyawan_nama,a.jual_tanggal,a.jual_status_bayar
+        from tbl_jual a
+        join tbl_customer b on a.jual_customer = b.customer_id 
+        join tbl_sales_mapping c on b.customer_id = c.id_customer
+        join tbl_sales_master d on c.id_sales = d.sales_id
+        join tbl_karyawan e on d.karyawan_id = e.karyawan_id
+        left join tbl_setoran_hutang f on a.jual_nofak = f.nofak 
+--         where a.jual_tanggal <= NOW()-INTERVAL 1 day and a.jual_status_bayar = 0
+        order by a.jual_nofak;
