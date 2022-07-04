@@ -125,6 +125,18 @@
                 <thead>
                     <tr>
                         <th style="font-size:14px;text-align:center;width:40px;">No</th>                        
+                        <th style="font-size:14px;text-align:center;">Customer</th>                    
+                        <th style="font-size:14px;text-align:center;">Total</th>
+                    </tr>
+                </thead>
+                <tbody id ="table_customer">
+                </tbody>
+            </table>
+
+            <table class="table table-bordered table-condensed" style="font-size:11px;" id="mydata">
+                <thead>
+                    <tr>
+                        <th style="font-size:14px;text-align:center;width:40px;">No</th>                        
                         <th style="font-size:14px;text-align:center;">Detail</th>                    
                         <th style="font-size:14px;text-align:center;">Nominal</th>
                     </tr>
@@ -132,6 +144,7 @@
                 <tbody id ="table">
                 </tbody>
             </table>
+
             </div>
 
 
@@ -209,6 +222,35 @@
                                 // var data = $.parseJSON(data);
                                 // console.log(data);  
                                 $("#table").html(data);
+                                // if (data.status == 1){
+                                //     Swal.fire({
+                                //         type:'success',
+                                //         title: 'Sukses!',
+                                //         text: data.message,                                
+                                //     }).then (function(){
+                                //         location.reload();
+                                //     })
+                                // }else{
+                                //     Swal.fire({
+                                //         type:'error',
+                                //         title: 'Oops...',
+                                //         text: data.message,
+                                //         footer: '<a href="https://google.com">Why do I have this issue?</a>'
+                                //     },function(){
+                                //         location.reload();
+                                //     })
+                                // }                                        
+                            }
+                        });
+
+                        $.ajax({
+                            type: "POST",
+                            data: {filter: filter},
+                            url: "<?php echo base_url()?>admin/Laba_rugi/get_data_customer", 
+                            success:function(data){                        
+                                // var data = $.parseJSON(data);
+                                // console.log(data);  
+                                $("#table_customer").html(data);
                                 // if (data.status == 1){
                                 //     Swal.fire({
                                 //         type:'success',

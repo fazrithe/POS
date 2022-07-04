@@ -16,6 +16,21 @@ class M_laba_rugi extends CI_Model{
 		}
 	}
 
+    function get_data_jual_customer($param=""){   
+        
+        if ($param < 13){
+            $tahun = date("Y");
+            $hsl=$this->db->query("select jual_customer, sum(jual_total)as total_jual from tbl_jual where year(jual_tanggal) = ".$tahun." and month(jual_tanggal) = ".$param." group by jual_customer");
+        }else{
+            $hsl=$this->db->query("select jual_customer, sum(jual_total)as total_jual from tbl_jual where year(jual_tanggal) = ".$param." group by jual_customer");
+        }    
+        
+        return $hsl->result_array();
+		// foreach($result as $a){
+		// 	return $a['total_jual'];
+		// }
+	}
+
     function get_data_beli($param=""){   
         
         if ($param < 13){

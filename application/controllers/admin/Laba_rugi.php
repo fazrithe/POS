@@ -91,4 +91,32 @@ class Laba_rugi extends CI_Controller{
             echo "Halaman tidak ditemukan";
         } 
     }
+
+    function get_data_customer(){
+        if($this->session->userdata('akses')=='1'){
+            $filter=$this->input->post('filter');
+            $result_jual=$this->M_laba_rugi->get_data_jual_customer($filter);
+            $result_beli=$this->M_laba_rugi->get_data_beli($filter);
+            $result_income=$this->M_laba_rugi->get_data_income($filter);
+            $result_outcome=$this->M_laba_rugi->get_data_outcome($filter);
+
+            $no=1;
+            $total = 0;
+
+            foreach($result_jual as $value){  
+                $data = $this->db->get_where('tbl_customer', array('customer_id'=>$value['jual_customer']))->row();
+                if(!empty($data)){
+                echo"<tr>";
+                echo "<td>".$no."</td>";
+                echo "<td style='font-size:13px;'>".$data->customer_name."</td>";
+                echo "<td style='color:#008000;font-size:14px;text-align:right;'>".number_format($value['total_jual'])."</td>";
+                echo "<tr>";   
+                $no++;
+                }
+            }
+
+        }else{
+            echo "Halaman tidak ditemukan";
+        } 
+    }
 }

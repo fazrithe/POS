@@ -229,14 +229,22 @@ class Laporan extends CI_Controller{
 	}
 
 	function lap_jual_xls(){
-		$x['data'] = $this->M_laporan->get_data_jual();
-		$x['jml']  = $this->M_laporan->get_total_jual();
+		$start_date = $this->input->post('start_date');
+		$end_date	= $this->input->post('end_date');
+		$x['data'] = $this->M_laporan->get_data_jual($start_date,$end_date);
+		$x['jml']  = $this->M_laporan->get_total_jual($start_date,$end_date);
+		$x['start_date'] = $start_date;
+		$x['end_date'] = $end_date;
 		$this->load->view('admin/laporan/v_lJual_xls',$x);		
 	}
 
 	function lap_jual_pdf(){
-		$x['data'] = $this->M_laporan->get_data_jual();
-		$x['jml']  = $this->M_laporan->get_total_jual();
+		$start_date = $this->input->post('start_date');
+		$end_date	= $this->input->post('end_date');
+		$x['data'] = $this->M_laporan->get_data_jual($start_date,$end_date);
+		$x['jml']  = $this->M_laporan->get_total_jual($start_date,$end_date);
+		$x['start_date'] = $start_date;
+		$x['end_date'] = $end_date;
 		$this->load->view('admin/laporan/v_lJual_pdf',$x);	
 		$html = $this->output->get_output();
 		$this->load->library('pdf');
@@ -245,6 +253,24 @@ class Laporan extends CI_Controller{
 		$this->dompdf->render();
 		$this->dompdf->stream("lap_jual.pdf",array("Attachment"=>0));
 	}
+
+	// function lap_jual_xls(){
+	// 	$x['data'] = $this->M_laporan->get_data_jual();
+	// 	$x['jml']  = $this->M_laporan->get_total_jual();
+	// 	$this->load->view('admin/laporan/v_lJual_xls',$x);		
+	// }
+
+	// function lap_jual_pdf(){
+	// 	$x['data'] = $this->M_laporan->get_data_jual();
+	// 	$x['jml']  = $this->M_laporan->get_total_jual();
+	// 	$this->load->view('admin/laporan/v_lJual_pdf',$x);	
+	// 	$html = $this->output->get_output();
+	// 	$this->load->library('pdf');
+	// 	$this->dompdf->loadHTML($html);
+	// 	$this->dompdf->setPaper('A4','landscape');
+	// 	$this->dompdf->render();
+	// 	$this->dompdf->stream("lap_jual.pdf",array("Attachment"=>0));
+	// }
 
 	function lap_jual_xls_cust(){		
 		$dtJx1=$this->input->post('dtJx1');

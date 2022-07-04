@@ -18,7 +18,7 @@ th {
 </style>
 
 
-<b><h4>Laporan Penjualan <?php echo date('M-Y');?></h4></b>
+<b><h4>Laporan Penjualan <?php echo $start_date;?> s/d <?php echo $end_date;?></h4></b>
 <table width="100%">
     <thead>
         <tr style='font-weight:bold;'>
@@ -82,17 +82,17 @@ th {
             $b=$jml->row_array();
         ?>
         <tr>
-            <td colspan="9" align='center'><b>Total (Rp)</b></td>
+            <td colspan="11" align='center'><b>Total (Rp)</b></td>
             <td align='right'><b><?php echo $b['jual_total'];?></b></td>
         </tr>
 
         <tr>
-            <td colspan="9" align='center'><b>Cashback (Rp)</b></td>
+            <td colspan="11" align='center'><b>Cashback (Rp)</b></td>
             <td align='right'><b><?php echo $b['total_cashback'];?></b></td>
         </tr>
 
         <tr>
-            <td colspan="9" align='center'><b>Grand Total (Rp)</b></td>
+            <td colspan="11" align='center'><b>Grand Total (Rp)</b></td>
             <td align='right'><b><?php echo $b['grand_total'];?></b></td>
         </tr>
     </tbody>

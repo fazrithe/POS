@@ -87,8 +87,10 @@
                         <td style="text-align:center;vertical-align:middle">4</td>
                         <td style="vertical-align:middle;">Laporan Penjualan</td>
                         <td style="text-align:center;">
-                            <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_jual_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
-                            <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_jual_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
+                            <!-- <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_jual_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
+                            <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_jual_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a> -->
+                            <a class="btn btn-sm btn-default" href="#" data-toggle="modal" data-target="#exReportPenjualan"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
+                            <a class="btn btn-sm btn-default" href="#" data-toggle="modal" data-target="#pdfReportPenjualan"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
                     </tr>
 
@@ -622,6 +624,68 @@
         </footer>
 
     </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exReportPenjualan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Export Laporan Penjualan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <form method="post" action="<?php echo base_url().'admin/laporan/lap_jual_xls'?>" target="_blank">
+      <div class="modal-body">
+        <div class="form-group">
+            <label>Mulai Tanggal</label>
+            <input type="date" name="start_date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Saimpai Tanggal</label>
+            <input type="date" name="end_date" class="form-control">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button class="btn btn-success">Export</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="pdfReportPenjualan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Export Laporan Penjualan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <form method="post" action="<?php echo base_url().'admin/laporan/lap_jual_pdf'?>" target="_blank">
+      <div class="modal-body">
+        <div class="form-group">
+            <label>Mulai Tanggal</label>
+            <input type="date" name="start_date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Saimpai Tanggal</label>
+            <input type="date" name="end_date" class="form-control">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button class="btn btn-danger">Export</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
     <!-- /.container -->
 
     <!-- jQuery -->
