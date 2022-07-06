@@ -99,7 +99,8 @@ $mimes = array(	'hqx'	=>	'application/mac-binhex40',
 				'word'	=>	array('application/msword', 'application/octet-stream'),
 				'xl'	=>	'application/excel',
 				'eml'	=>	'message/rfc822',
-				'json' => array('application/json', 'text/json')
+				'json' => array('application/json', 'text/json'),
+				'sql'   =>  array('application/octet-stream', 'text/sql', 'text/plain','text/x-sql')
 			);
 
 

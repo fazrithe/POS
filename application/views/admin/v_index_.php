@@ -320,6 +320,14 @@
                         </a>
                   </div> 
             </div>
+            <div class="col-md-3 portfolio-item">
+                  <div class="menu-item lightgreen" style="height:150px;">
+                        <a href="<?php echo base_url().'admin/Setoran_hutang'?>" data-toggle="modal">
+                              <i class="fa fa-calculator"></i>
+                              <p style="text-align:left;font-size:14px;padding-left:5px;">Setoran Hutang</p>
+                        </a>
+                  </div> 
+            </div>
             <!-- <div class="col-md-2 portfolio-item">
                   <div class="menu-item softblue" style="height:150px;">
                         <a href="<?php echo base_url().'admin/Sales_mapping'?>" data-toggle="modal">
