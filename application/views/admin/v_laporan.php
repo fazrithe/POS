@@ -52,6 +52,7 @@
                         <th style="text-align:center;width:40px;">No</th>
                         <th>Laporan</th>
                         <th style="width:120px;text-align:center;">Download</th>
+                        <th style="width:20px;text-align:center;">Email</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,6 +64,7 @@
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_pembelian_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_pembelian_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -72,6 +74,7 @@
                             <a class="btn btn-sm btn-default" href="#lap_beli_xls_cust" data-toggle="modal"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="#lap_beli_pdf_cust" data-toggle="modal"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>                            
                         </td>
+                        <td></td>
                     </tr>
                 
                     <tr>
@@ -81,6 +84,7 @@
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_data_barang_xls'?>" target="_blank"><span style="color:green"class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_data_barang'?>" target="_blank"><span style="color:red"class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -92,8 +96,9 @@
                             <a class="btn btn-sm btn-default" href="#" data-toggle="modal" data-target="#exReportPenjualan"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="#" data-toggle="modal" data-target="#pdfReportPenjualan"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
+                        <td> <a class="btn btn-sm btn-default" href="#" data-toggle="modal" data-target="#emailReportPenjualan"><span style="color:red" class="fa fa-envelope"></span> Email</a></td>
                     </tr>
-
+<!-- 
                     <tr>
                         <td style="text-align:center;vertical-align:middle">5</td>
                         <td style="vertical-align:middle;">Laporan Penjualan Range Date</td>
@@ -101,7 +106,8 @@
                             <a class="btn btn-sm btn-default" href="#lap_jual_xls_cust" data-toggle="modal"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="#lap_jual_pdf_cust" data-toggle="modal"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>                            
                         </td>
-                    </tr>
+                        <td></td>
+                    </tr> -->
 
                     <tr>
                         <td style="text-align:center;vertical-align:middle">6</td>
@@ -110,6 +116,7 @@
                         <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_return_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_return_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -119,6 +126,7 @@
                         <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtSales_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtSales_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -128,6 +136,7 @@
                         <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtKaryawan_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtKaryawan_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -137,6 +146,7 @@
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtUser_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtUser_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -146,6 +156,7 @@
                             <a class="btn btn-sm btn-default" href="#lap_history_so_xls" data-toggle="modal"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="#lap_history_so_pdf" data-toggle="modal"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -155,6 +166,7 @@
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_rankItem_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_rankItem_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
+                        <td></td>
                     </tr>
 
                     <!-- <tr>
@@ -681,6 +693,40 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button class="btn btn-danger">Export</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+ <!-- Modal -->
+ <div class="modal fade" id="emailReportPenjualan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Kirim Email Laporan Penjualan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form method="post" action="<?php echo base_url().'admin/laporan/lap_jual_email'?>" enctype="multipart/form-data" target="_blank">
+      <div class="modal-body">
+      <div class="form-group">
+            <label>Email to</label>
+            <input type="text" name="email_to" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Mulai Tanggal</label>
+            <input type="date" name="start_date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Saimpai Tanggal</label>
+            <input type="date" name="end_date" class="form-control">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button class="btn btn-danger">Send</button>
       </div>
     </form>
     </div>

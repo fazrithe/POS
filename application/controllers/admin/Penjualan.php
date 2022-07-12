@@ -208,6 +208,7 @@ class Penjualan extends CI_Controller{
 				}else{
 					$insert_id_cust = $customer;
 				}
+				$this->session->set_userdata('sess_ccustid',$insert_id_cust);
 				$param     = array();
 				
 				$total=$this->input->post('total');
@@ -431,7 +432,6 @@ class Penjualan extends CI_Controller{
 		$name = $this->input->post('name');		
 		$this->session->set_userdata('sess_cname',$name);
 		echo $name;
-
 	}
 
 }

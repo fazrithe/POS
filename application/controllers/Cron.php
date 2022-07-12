@@ -1,23 +1,18 @@
 <?php
-class Welcome extends CI_Controller{
+class Cron extends CI_Controller{
 	function __construct(){
 		parent::__construct();
-		if($this->session->userdata('masuk') !=TRUE){			
-			// $url=base_url();
-			$url = 'Administrator';
-            redirect($url);
-        };
+        $this->load->model('M_kategori');
+		$this->load->model('M_barang');
+		$this->load->model('M_suplier');
+		$this->load->model('M_pembelian');
+		$this->load->model('M_penjualan');
+		$this->load->model('M_customer');
+		$this->load->model('M_laporan');
 	}
 	
-	function index(){
-		$config = array(
-            "webtitle" => $this->config->item('title')
-        );
-		$this->load->view('admin/v_index',$config);
-	}
-
-	function lap_jual_email_cron(){
-		$email_to = 'fazrithe@gmail.com';
+	function lap_penjualan(){
+        $email_to = 'fazrithe@gmail.com';
 		$start_date = date("Y-m-d");
 		$end_date	= date("Y-m-d", strtotime('+1 days'));
 		$data = $this->M_laporan->get_data_jual($start_date,$end_date);
@@ -127,8 +122,7 @@ class Welcome extends CI_Controller{
         $this->email->send();
         $return['status'] = "1";
         $return['msg'] = "Successfully sent email";
-		// return "success";
-        // redirect('admin/laporan');
+        redirect('/Administrator');
  
 	}
 }

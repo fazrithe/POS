@@ -119,6 +119,22 @@ class M_laporan extends CI_Model{
 		return $hsl;
 	}
 
+	
+	function get_data_jual_day($start_date,$end_date){
+		$hsl=$this->db->query("SELECT a.jual_nofak, a.jual_tipe_pembayaran, c.customer_name, DATE_FORMAT(a.jual_tanggal,'%d %M %Y') AS jual_tanggal,d_jual_barang_id,d_jual_barang_nama,d_jual_barang_satuan,d_jual_barang_harpok,d_jual_barang_harjul,d_jual_qty,d_jual_diskon,d_jual_total
+		FROM tbl_jual a JOIN tbl_detail_jual b ON a.jual_nofak=b.d_jual_nofak
+		JOIN tbl_customer c ON a.jual_customer=c.customer_id
+		WHERE a.jual_tanggal BETWEEN '".$start_date."' AND '".$end_date."'");
+		return $hsl;
+	}
+
+	function get_total_jual_day($start_date,$end_date){
+		$hsl=$this->db->query("SELECT sum(a.jual_total)as jual_total, sum(a.jual_belanja)as grand_total,sum(a.jual_cashback) as total_cashback 
+		FROM tbl_jual a JOIN tbl_customer b ON a.jual_customer=b.customer_id
+		WHERE a.jual_tanggal BETWEEN '".$start_date."' AND '".$end_date."'");
+		return $hsl;
+	}
+
 	function get_total_penjualan1(){
 		$hsl=$this->db->query("SELECT sum(jual_total)as jual_total, sum(jual_belanja)as grand_total,sum(jual_cashback) as total_cashback FROM tbl_jual");
 		return $hsl;
