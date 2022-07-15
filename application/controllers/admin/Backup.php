@@ -32,21 +32,9 @@ class Backup extends CI_Controller {
 
     public function restore_database() {
         
-        $this->load->helper('file');
-        // $this->load->model('sismas_m');
-        $config['upload_path']="./assets/database/";
-        $config['allowed_types']="jpg|png|gif|jpeg|bmp|sql|x-sql";
-        $this->load->library('upload',$config);
-        $this->upload->initialize($config);
-        $data = $this->upload->do_upload("datafile");
-        if(!$this->upload->do_upload("datafile")){
-            $isi_file = file_get_contents($data);
-            $string_query = rtrim( $isi_file, "\n;" );
-            $array_query = explode(";", $string_query);
-            foreach($array_query as $query)
-            {
-              $this->db->query($query);
-            }
-        }
+        $url = base_url('admin/Backup/restore_database');
+        include_once APPPATH . "./libraries/google-api-php-client/src/Google/client.php";
+        include_once APPPATH . "./libraries/google-api-php-client/src/Google/Service/Drive.php";
+       
     }
 }
