@@ -260,6 +260,7 @@ class Laporan extends CI_Controller{
 		$start_date = $this->input->post('start_date');
 		$end_date	= $this->input->post('end_date');
 		$data = $this->M_laporan->get_data_jual($start_date,$end_date);
+		
 		$jml  = $this->M_laporan->get_total_jual($start_date,$end_date);
 		$message = '<!DOCTYPE html>
 		<html><b><h4>Laporan Penjualan '.$start_date.' s/d '.$end_date.'</h4></b>

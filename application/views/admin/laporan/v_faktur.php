@@ -140,7 +140,7 @@
                 <td style="text-align:right;"><b><?php echo 'Rp ' . number_format($b['jual_belanja']); ?></b></td>
             </tr>
             <tr>
-                <td style="text-align:left;padding-left: 500px;"><b>Bayar Tunai</b></td>
+                <td style="text-align:left;padding-left: 500px;"><b>Bayar <?php echo $this->session->userdata('tipe_pembayaran'); ?></b></td>
                 <td style="text-align:right;"><b> <?php echo 'Rp ' . number_format($b['jual_jml_uang']); ?></b></td>
             </tr>
             <tr>

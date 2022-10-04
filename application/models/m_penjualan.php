@@ -134,7 +134,7 @@ class M_penjualan extends CI_Model{
 		// echo $nofak;
 		//$hsl=$this->db->query("SELECT jual_nofak,DATE_FORMAT(jual_tanggal,'%d/%m/%Y %H:%i:%s') AS jual_tanggal,jual_cashback,jual_belanja,jual_total,jual_jml_uang,jual_kembalian,jual_keterangan,jual_alamat,jual_customer,d_jual_barang_nama,d_jual_barang_satuan,d_jual_barang_harjul,d_jual_qty,d_jual_diskon,d_jual_total,d_jual_disc_val,jual_aki_bekas,jual_garansi FROM tbl_jual JOIN tbl_detail_jual ON jual_nofak=d_jual_nofak WHERE jual_nofak='$nofak'");
 		
-		$hsl=$this->db->query("SELECT jual_nofak,DATE_FORMAT(jual_tanggal,'%d/%m/%Y %H:%i:%s') AS jual_tanggal,jual_belanja,jual_total,jual_jml_uang,jual_kembalian,jual_keterangan,jual_alamat,jual_customer,d_jual_barang_nama,d_jual_barang_satuan,d_jual_barang_harjul,d_jual_qty,d_jual_total FROM tbl_jual JOIN tbl_detail_jual ON jual_nofak=d_jual_nofak WHERE jual_nofak='$nofak'");
+		$hsl=$this->db->query("SELECT jual_tipe_pembayaran,jual_nofak,DATE_FORMAT(jual_tanggal,'%d/%m/%Y %H:%i:%s') AS jual_tanggal,jual_belanja,jual_total,jual_jml_uang,jual_kembalian,jual_keterangan,jual_alamat,jual_customer,d_jual_barang_nama,d_jual_barang_satuan,d_jual_barang_harjul,d_jual_qty,d_jual_total FROM tbl_jual JOIN tbl_detail_jual ON jual_nofak=d_jual_nofak WHERE jual_nofak='$nofak'");
 		
 		// print_r( $hsl);
 		return $hsl;

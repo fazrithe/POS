@@ -166,7 +166,7 @@
                         <th></th>
                         <th></th>
                         <!--<th></th>-->
-                        <th style="text-align: left;">Bayar Tunai</th>
+                        <th style="text-align: left;">Bayar <?php echo $b['jual_tipe_pembayaran']; ?></th>
                         <th style="border:1.5px solid black;text-align: right;"><?php echo 'Rp ' . number_format($b['jual_jml_uang']); ?></th>
                     </tr>
                     <tr>

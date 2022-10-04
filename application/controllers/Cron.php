@@ -12,7 +12,7 @@ class Cron extends CI_Controller{
 	}
 	
 	function lap_penjualan(){
-        $email_to = 'fazrithe@gmail.com';
+        $email_to = 'cyberfazri@gmail.com';
 		$start_date = date("Y-m-d");
 		$end_date	= date("Y-m-d", strtotime('+1 days'));
 		$data = $this->M_laporan->get_data_jual($start_date,$end_date);

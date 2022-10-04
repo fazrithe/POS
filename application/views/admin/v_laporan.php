@@ -52,7 +52,7 @@
                         <th style="text-align:center;width:40px;">No</th>
                         <th>Laporan</th>
                         <th style="width:120px;text-align:center;">Download</th>
-                        <!-- <th style="width:20px;text-align:center;">Email</th> -->
+                        <th style="width:20px;text-align:center;">Email</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,7 +64,7 @@
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_pembelian_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_pembelian_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
-                        <!-- <td></td> -->
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -74,7 +74,7 @@
                             <a class="btn btn-sm btn-default" href="#lap_beli_xls_cust" data-toggle="modal"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="#lap_beli_pdf_cust" data-toggle="modal"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>                            
                         </td>
-                        <!-- <td></td> -->
+                        <td></td>
                     </tr>
                 
                     <tr>
@@ -84,7 +84,7 @@
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_data_barang_xls'?>" target="_blank"><span style="color:green"class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_data_barang'?>" target="_blank"><span style="color:red"class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
-                        <!-- <td></td> -->
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -96,7 +96,7 @@
                             <a class="btn btn-sm btn-default" href="#" data-toggle="modal" data-target="#exReportPenjualan"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="#" data-toggle="modal" data-target="#pdfReportPenjualan"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
-                        <!-- <td> <a class="btn btn-sm btn-default" href="#" data-toggle="modal" data-target="#emailReportPenjualan"><span style="color:red" class="fa fa-envelope"></span> Email</a></td> -->
+                        <td> <a class="btn btn-sm btn-default" href="#" data-toggle="modal" data-target="#emailReportPenjualan"><span style="color:red" class="fa fa-envelope"></span> Email</a></td>
                     </tr>
 <!-- 
                     <tr>
@@ -116,7 +116,7 @@
                         <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_return_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_return_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
-                        <!-- <td></td> -->
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -126,7 +126,7 @@
                         <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtSales_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtSales_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
-                        <!-- <td></td> -->
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -136,7 +136,7 @@
                         <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtKaryawan_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtKaryawan_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
-                        <!-- <td></td> -->
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -146,7 +146,7 @@
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtUser_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_dtUser_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
-                        <!-- <td></td> -->
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -156,7 +156,7 @@
                             <a class="btn btn-sm btn-default" href="#lap_history_so_xls" data-toggle="modal"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="#lap_history_so_pdf" data-toggle="modal"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
-                        <!-- <td></td> -->
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -166,7 +166,7 @@
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_rankItem_xls'?>" target="_blank"><span style="color:green" class="fa fa-file-excel-o"></span> Excel</a>
                             <a class="btn btn-sm btn-default" href="<?php echo base_url().'admin/Laporan/lap_rankItem_pdf'?>" target="_blank"><span style="color:red" class="fa fa-file-pdf-o"></span> Pdf</a>
                         </td>
-                        <!-- <td></td> -->
+                        <td></td>
                     </tr>
 
                     <!-- <tr>

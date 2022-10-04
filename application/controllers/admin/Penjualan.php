@@ -163,7 +163,8 @@ class Penjualan extends CI_Controller{
 			$this->session->unset_userdata('sess_csisa');
 			$this->session->unset_userdata('sess_calamat');
 			$this->session->unset_userdata('newhutang');	
-			$this->session->unset_userdata('sess_tipe');			
+			$this->session->unset_userdata('sess_tipe');	
+			$this->session->unset_userdata('sess_tipe_pembayaran');		
 			$this->load->view('admin/alert/alert_sukses');	
 		}else{
 			redirect('admin/Penjualan');
@@ -189,6 +190,7 @@ class Penjualan extends CI_Controller{
 				$new_customer  = $this->input->post('fin_new_customer');
 
 				$tipe_pembayaran = $this->input->post('tipe_pembayaran');
+				$this->session->set_userdata('sess_tipe_pembayaran', $tipe_pembayaran);
 				// if($this->session->userdata('sess_cname')==""){
 				// 	$customer = "ssNONAMEee";
 				// }

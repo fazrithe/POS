@@ -105,7 +105,7 @@ class M_laporan extends CI_Model{
 	// }
 
 	function get_data_jual($start_date,$end_date){
-		$hsl=$this->db->query("SELECT a.jual_nofak, a.jual_tipe_pembayaran, c.customer_name, DATE_FORMAT(a.jual_tanggal,'%d %M %Y') AS jual_tanggal,d_jual_barang_id,d_jual_barang_nama,d_jual_barang_satuan,d_jual_barang_harpok,d_jual_barang_harjul,d_jual_qty,d_jual_diskon,d_jual_total
+		$hsl=$this->db->query("SELECT a.jual_customer, a.jual_nofak, a.jual_tipe_pembayaran, c.customer_name, DATE_FORMAT(a.jual_tanggal,'%d %M %Y') AS jual_tanggal,d_jual_barang_id,d_jual_barang_nama,d_jual_barang_satuan,d_jual_barang_harpok,d_jual_barang_harjul,d_jual_qty,d_jual_diskon,d_jual_total
 		FROM tbl_jual a JOIN tbl_detail_jual b ON a.jual_nofak=b.d_jual_nofak
 		JOIN tbl_customer c ON a.jual_customer=c.customer_id
 		WHERE a.jual_tanggal BETWEEN '".$start_date."' AND '".$end_date."'");
