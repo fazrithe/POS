@@ -36,13 +36,13 @@
     <body>
             <table border="0" align="center" style="width:100%;border:none; margin-top:0px; padding-left:35px; padding-top:10px;">
                 <tr>
-                    <th style="text-align:left; font-size: 30px;">Afrizal Jaya</th>
+                    <th style="text-align:left; font-size: 30px;">Star POS</th>
                 </tr>
                 <tr>
-                    <th style="text-align:left; font-size:20px;">Jl. Raya Cilegon No.27 Pelamunan Kramatwatu, Serang-Banten</th>
+                    <th style="text-align:left; font-size:20px;">Jl. ....</th>
                 </tr>
                 <tr>
-                    <th style="text-align:left;font-size:20px;">Telp. 0813 8858 2536</th>
+                    <th style="text-align:left;font-size:20px;">Telp. 08.....</th>
                 </tr>
             </table>
 

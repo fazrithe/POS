@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Produk By novariodaniel@gmail.com">
-    <meta name="author" content="Afrizal Jaya">
+    <meta name="author" content="Star POS">
 
     <title>Transaksi Penjualan</title>
 
@@ -270,7 +270,7 @@
             <footer>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p style="text-align:center;">Copyright &copy; <?php echo '2021'; ?> by Afrizal Jaya</p>
+                        <p style="text-align:center;">Copyright &copy; <?php echo '2021'; ?> by Star POS</p>
                     </div>
                 </div>
                 <!-- /.row -->

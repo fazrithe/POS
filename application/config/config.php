@@ -376,7 +376,7 @@ $config['rewrite_short_tags'] = FALSE;
 |
 */
 
-$config['title'] = 'Afrizal Jaya';
+$config['title'] = 'Star POS';
 
 /*
 | -----------------------------------------------

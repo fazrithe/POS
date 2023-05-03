@@ -22,7 +22,7 @@
 				<div class="login-wrapper">
 			        <div class="box">
 			            <div class="content-wrap">
-			                <img width="310px" src="<?php echo base_url().'assets/img/afrizal.png'?>"/>
+			                <img width="310px" src="<?php echo base_url().'assets/img/starpos.png'?>"/>
 			                <p><?php echo $this->session->flashdata('msg');?></p>
 	                        <hr/>
 	                        <form action="<?php echo base_url().'Administrator/cekuser'?>" method="post">
